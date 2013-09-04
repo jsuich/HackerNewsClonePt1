@@ -36,7 +36,13 @@ end
 # ============ POSTS ===============
 post '/login' do
   # => Include functionality to authenticate and set sessions token
-  session[:id] = User.find_by_usernameUser.authenticate(params[:username], params[:password]) ? erb :index : erb :login
   
+  if User.authenticate(params[:username], params[:password])
+    session[:id] = User.find_by_username(params[:username]).id
+    redirect '/index'
+
+  else
+    redirect '/login'
+  end
 end
 
