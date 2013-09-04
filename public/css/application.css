@@ -6,7 +6,27 @@
 th {
   text-align: left;
 }
+#mainLogo {
+  height:60px;
+  width:60px;
+  border: 4px solid #6b6b6b;
+  border-radius: 4px;
+  color: #6b6b6b;
+  font-size: 52px;
+  text-align: center;
+}
 
+#logowrapper {
+  text-align: right;
+  width:60px;
+}
+
+#submitBreaker {
+  width: 33px;
+}
+form {
+  display: inline-block;
+}
 nav {
   display:block;
   width: 100%;
